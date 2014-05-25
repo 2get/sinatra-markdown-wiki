@@ -1,0 +1,10 @@
+doctype html
+html
+  head
+    meta charset="utf-8"
+    title #{@site_title}
+    link rel="stylesheet" href="/css/main.css"
+    script src="//ajax.googleapis.com/ajax/libs/jquery/#{@jquery_version}/jquery.min.js"
+    script src="/js/main.js"
+  body
+    == yield
