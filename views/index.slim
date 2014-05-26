@@ -1,1 +1,11 @@
-h1 Hello World!
+h1 #{@site_title}
+
+p 作りたいページのURLにアクセスするとページが作成できます。
+
+p ページを編集したい場合は、URL の後に /edit を付けてアクセスすると編集できます。
+
+ul
+- @markdown_files.each do |file|
+  li
+    a href="#{URI.escape(file)}"
+      #{file}

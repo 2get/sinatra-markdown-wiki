@@ -1,0 +1,11 @@
+h1 Create New Page
+
+form method="post" action="pages" role="form"
+  div class="form-group"
+    - if @title
+      input type="text" class="form-control" name="page_title" value="#{URI.unescape @title}"
+    - else
+      input type="text" class="form-control" name="page_title"
+  div class="form-group"
+    textarea class="form-control" rows="10" name="page_body"
+  button type="submit" class="btn btn-lg btn-primary btn-block" Save
